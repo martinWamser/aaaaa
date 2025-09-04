@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doutrina Truman e Plano Marshall</title>
+
+  <!-- Fontes e libs -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Titillium+Web:wght@300;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --verdeNeon: #00ff99;
+      --fundo: linear-gradient(135deg, #000c1f, #002952);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Titillium Web', sans-serif;
+      background: var(--fundo);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-size: 400% 400%;
+      animation: gradient 12s ease infinite;
+      padding: 4rem 1rem 3rem;
+      text-align: center;
+      color: #000;
+      font-family: 'Bebas Neue', cursive;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      background-image: url('fundo.webp');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+      z-index: 2;
+
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    header h1,
+    header p {
+      color: var(--verdeNeon);
+    }
+
+    main {
+      max-width: 960px;
+      margin: auto;
+      padding: 3rem 2rem 6rem;
+      position: relative;
+    }
+
+    section {
+      background: rgba(0, 0, 50, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 10px 25px rgba(0, 255, 153, 0.3);
+      transition: 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+
+    section:hover {
+      transform: scale(1.02);
+      box-shadow: 0 20px 35px rgba(0, 255, 153, 0.5);
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2.5rem;
+      color: var(--verdeNeon);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    h2::before {
+      content: '\f05a';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: var(--verdeNeon);
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #e0ffee;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    section img {
+      display: block;
+      max-width: 50%;
+      height: auto;
+      border-radius: 15px;
+      margin: 1.5rem auto;
+      border: 3px solid var(--verdeNeon);
+      box-shadow: 0 10px 25px rgba(0, 255, 153, 0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+      object-fit: cover;
+    }
+
+    section img:hover {
+      transform: scale(1.04);
+      box-shadow: 0 20px 40px rgba(0, 255, 153, 0.6);
+      filter: saturate(1.05);
+    }
+
+    .containment {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 1.6rem;
+      align-items: center;
+    }
+
+    .containment .text {
+      padding-right: 0.5rem;
+    }
+
+    .containment .visual {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.08));
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .containment .visual .step {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin: 0.8rem 0;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .containment .visual .step i {
+      font-size: 1.6rem;
+      color: var(--verdeNeon);
+      width: 38px;
+      text-align: center;
+    }
+
+    @media (max-width: 880px) {
+      .containment {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 2.8rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    canvas {
+      margin-top: 2rem;
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 255, 153, 0.5);
+      background: #001f3f;
+    }
+
+    footer {
+      text-align: center;
+      background: #111;
+      color: #ccc;
+      padding: 2rem;
+      font-size: 0.9rem;
+      font-style: italic;
+      box-shadow: inset 0 5px 15px rgba(255, 255, 255, 0.05);
+      position: relative;
+      z-index: 2;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--verdeNeon);
+    }
+
+    .moneyRain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .money {
+      position: absolute;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10vh) rotate(0deg);
+      }
+
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+
+    /* Jogo popup styles */
+    .game-popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 12, 31, 0.85);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .game-popup-overlay.active {
+      display: flex;
+    }
+
+    .game-popup-content {
+      background: linear-gradient(135deg, #001f3f 80%, #002952 100%);
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0, 255, 153, 0.3);
+      padding: 0;
+      max-width: 98vw;
+      width: 1000px;
+      max-height: 95vh;
+      overflow-y: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid var(--verdeNeon);
+      animation: modalIn 0.4s;
+      cursor: default;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0, 255, 153, 0.3) rgba(0, 0, 0, 0.05);
+    }
+
+    
+    @keyframes modalIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .game-popup-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--verdeNeon);
+      color: #002952;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0, 255, 153, 0.2);
+    }
+
+    .open-game-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--verdeNeon);
+      color: #002952;
+      border: none;
+      border-radius: 16px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      z-index: 1500;
+      box-shadow: 0 4px 16px rgba(0, 255, 153, 0.3);
+      transition: background 0.3s;
+    }
+
+    .open-game-btn:hover {
+      background: #00e68a;
+    }
+
+    @media (max-width: 900px) {
+      .game-popup-content {
+        width: 98vw;
+        min-width: 0;
+        padding: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .game-popup-content {
+        width: 100vw;
+        border-radius: 0;
+        padding: 0;
+      }
+
+      .game-container {
+        padding: 1rem;
+      }
+
+      .game-popup-close {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+
+    /* Jogo styles */
+    .game-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      background: linear-gradient(45deg, var(--verdeNeon), #00ccff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: rgba(0, 255, 153, 0.1);
+      border: 1px solid rgba(0, 255, 153, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--verdeNeon);
+    }
+
+    .game-area {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .click-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .click-button {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, var(--verdeNeon), #00ccff);
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #002952;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 30px rgba(0, 255, 153, 0.5);
+    }
+
+    .click-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 50px rgba(0, 255, 153, 0.8);
+    }
+
+    .click-button:active {
+      transform: scale(0.95);
+    }
+
+    .map-area {
+      background: rgba(0, 50, 100, 0.3);
+      border: 1px solid var(--verdeNeon);
+      border-radius: 12px;
+      padding: 1.5rem;
+      position: relative;
+      min-height: 320px;
+      max-width: 340px;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      box-sizing: border-box;
+      /* Centraliza o conteúdo do mapa */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .map-area h3 {
+      margin-bottom: 1rem;
+      color: var(--verdeNeon);
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .map-countries {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      margin: 0 auto;
+    }
+
+    .country {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.18);
+      border: 2px solid #00ff99;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: #fff;
+      font-family: inherit;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,255,153,0.08);
+      user-select: none;
+    }
+
+    .country.invested {
+      background: var(--verdeNeon);
+      border-color: var(--verdeNeon);
+      color: #002952;
+      box-shadow: 0 0 20px rgba(0, 255, 153, 0.5);
+    }
+
+    .country:hover {
+      transform: scale(1.1);
+      z-index: 2;
+    }
+
+    .upgrades {
+      background: rgba(0, 50, 100, 0.3);
+      border: 1px solid rgba(0, 255, 153, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .upgrade-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .upgrade-item:hover {
+      background: rgba(0, 255, 153, 0.1);
+      border-color: rgba(0, 255, 153, 0.3);
+    }
+
+    .upgrade-item.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* Dragging styles */
+    .game-popup-content {
+      cursor: default;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .game-popup-content.dragging {
+      box-shadow: 0 0 60px rgba(0, 255, 153, 0.5);
+      opacity: 0.97;
+      cursor: move;
+    }
+
+    .game-popup-dragbar {
+      width: 100%;
+      height: 48px;
+      cursor: move;
+      user-select: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 20;
+    }
+
+    .game-popup-content .header {
+      position: relative;
+      z-index: 21;
+    }
+
+    /* Novo estilo para área de países como lista de botões */
+    .country-list-area {
+      background: rgba(0, 50, 100, 0.3);
+      border: 1px solid var(--verdeNeon);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 0 auto 1rem auto;
+      max-width: 340px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+    }
+
+    .country-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.08);
+      border: 2px solid #00ff99;
+      border-radius: 10px;
+      padding: 0.8rem 1.2rem;
+      font-size: 1.1rem;
+      color: #fff;
+      font-family: inherit;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      box-shadow: 0 2px 8px rgba(0,255,153,0.08);
+      user-select: none;
+      outline: none;
+    }
+
+    .country-btn.invested {
+      background: var(--verdeNeon);
+      border-color: var(--verdeNeon);
+      color: #002952;
+      box-shadow: 0 0 20px rgba(0, 255, 153, 0.3);
+      cursor: default;
+    }
+
+    .country-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .country-btn .flag {
+      font-size: 1.3rem;
+      margin-right: 0.7rem;
+    }
+
+    .country-btn .country-name {
+      flex: 1;
+      text-align: left;
+    }
+
+    .country-btn .country-cost {
+      font-size: 0.95rem;
+      margin-left: 1rem;
+      color: #00ff99;
+      font-weight: normal;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#doutrina-truman">Doutrina Truman</a>
+    <a href="#plano-marshall">Plano Marshall</a>
+    <a href="#dados-economicos">Dados Econômicos</a>
+    <a href="#conclusao">Conclusão</a>
+  </nav>
+  <br>
+  <!-- Botões de navegação -->
+  <div style="text-align:center; margin: 1rem 0; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+    <a href="index.html">
+      <button
+        style="background:var(--verdeNeon);color:#002952;font-size:1.2rem;padding:0.7em 2em;border:none;border-radius:12px;cursor:pointer;box-shadow:0 4px 12px rgba(0,255,153,0.2);transition:background 0.3s;">
+        Voltar ao Início
+      </button>
+    </a>
+  </div>
+
+  <main>
+    <div class="moneyRain" id="moneyRain"></div>
+
+    <section id="doutrina-truman" data-aos="fade-right">
+      <h2>Doutrina Truman</h2>
+      <p>A Doutrina Truman foi anunciada em 1947 pelo presidente Harry Truman. Ela visava conter o avanço do comunismo,
+        oferecendo ajuda militar e econômica a países ameaçados, como a Grécia e a Turquia.</p>
+      <p>Essa estratégia marcou o início da Guerra Fria e influenciou toda a política externa dos EUA nas décadas
+        seguintes.</p>
+      <img src="HarryTruman.jpg" alt="Presidente Harry S. Truman" loading="lazy" data-aos="zoom-in">
+    </section>
+
+    <section id="plano-marshall" data-aos="fade-left">
+      <h2>Plano Marshall</h2>
+      <p>Lançado em 1948, o Plano Marshall foi um programa de ajuda econômica com o objetivo de reconstruir a Europa
+        após a Segunda Guerra Mundial.</p>
+      <p>Os EUA investiram cerca de 13 bilhões de dólares (mais de 140 bilhões em valores atuais) em países como Reino
+        Unido, França, Alemanha Ocidental e Itália.</p>
+      <canvas id="chartMarshall"></canvas>
+      <img src="planomarshall.webp" alt="Plano Marshall" loading="lazy" data-aos="zoom-in">
+    </section>
+
+    <section id="containment" data-aos="fade-up">
+      <h2>Como os EUA contiveram o comunismo</h2>
+      <div class="containment">
+        <div class="text">
+          <p> Abaixo, mostramos o crescimento do PIB (índice 1948=100) de alguns dos principais países beneficiados pelo
+            Plano
+            Marshall, no período de 1948 a 1952.</p>
+        </div>
+        <div class="visual">
+          <div class="step"><i class="fa-solid fa-hand-holding-dollar"></i> Ajuda econômica</div>
+          <div class="step"><i class="fa-solid fa-shield-halved"></i> Alianças militares</div>
+          <div class="step"><i class="fa-solid fa-user-secret"></i> Operações e influência</div>
+          <div class="step"><i class="fa-solid fa-broadcast-tower"></i> Propaganda cultural</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dados-economicos" data-aos="fade-up">
+      <h2>Dados Econômicos Reais</h2>
+      <canvas id="chartPIB"></canvas>
+    </section>
+
+    <section id="conclusao" data-aos="zoom-in">
+      <h2>Conclusão</h2>
+      <p> A Doutrina Truman e o Plano Marshall foram fundamentais para a rápida recuperação econômica da Europa
+        Ocidental
+        e para a contenção do comunismo durante a Guerra Fria. Esses esforços moldaram a política internacional do
+        século XX e têm lições importantes para o mundo atual.</p>
+
+    </section>
+
+    <!-- Botão fixo para abrir o jogo -->
+    <button class="open-game-btn" id="openGameBtn">Abrir Jogo</button>
+
+    <!-- Jogo popup -->
+    <div class="game-popup-overlay" id="gamePopupOverlay">
+      <div class="game-popup-content" id="gamePopupContent">
+        <div class="game-popup-dragbar" id="gamePopupDragbar"></div>
+        <button class="game-popup-close" id="closeGameBtn">Fechar</button>
+        <div class="game-container">
+          <div class="header">
+            <h1>Plano Marshall Clicker</h1>
+            <p>1947 - Reconstrua a Europa e contenha o Comunismo</p>
+          </div>
+          <div class="stats">
+            <div class="stat-card">
+              <div class="stat-value" id="dollars">$100</div>
+              <div>Dólares</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="dollarsPerSecond">$0/s</div>
+              <div>Renda por Segundo</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="totalInvested">$0</div>
+              <div>Total Investido</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="communismThreat">100%</div>
+              <div>Ameaça Comunista</div>
+            </div>
+          </div>
+          <div class="game-area">
+            <div class="click-area">
+              <button class="click-button" id="clickButton">
+                💵<br>
+                Investir<br>
+                +$<span id="dollarsPerClick">10</span>
+              </button>
+            </div>
+            <div class="country-list-area">
+              <h3 style="text-align:center; color:var(--verdeNeon); margin-bottom:1rem;">Investir nos Países</h3>
+              <button class="country-btn" id="uk-btn">
+                <span class="country-name">Reino Unido</span>
+                <span class="country-cost">Custo: $800 | +$80/s</span>
+              </button>
+              <button class="country-btn" id="france-btn">
+                <span class="country-name">França</span>
+                <span class="country-cost">Custo: $500 | +$50/s</span>
+              </button>
+              <button class="country-btn" id="germany-btn">
+                <span class="country-name">Alemanha</span>
+                <span class="country-cost">Custo: $1000 | +$100/s</span>
+              </button>
+              <button class="country-btn" id="italy-btn">
+                <span class="country-name">Itália</span>
+                <span class="country-cost">Custo: $750 | +$75/s</span>
+              </button>
+              <button class="country-btn" id="netherlands-btn">
+                <span class="country-name">Holanda</span>
+                <span class="country-cost">Custo: $400 | +$40/s</span>
+              </button>
+              <button class="country-btn" id="belgium-btn">
+                <span class="country-name">Bélgica</span>
+                <span class="country-cost">Custo: $350 | +$35/s</span>
+              </button>
+            </div>
+            <div class="upgrades">
+              <h3 style="margin-bottom: 1rem; color: var(--verdeNeon);">Melhorias</h3>
+              <div class="upgrade-item" id="upgrade-factory" data-cost="200" data-effect="5">
+                <strong>🏭 Fábrica ($200)</strong><br>
+                <small>+$5/s | Possuídas: <span class="owned">0</span></small>
+              </div>
+              <div class="upgrade-item" id="upgrade-logistics" data-cost="800" data-effect="25">
+                <strong>🚚 Logística ($800)</strong><br>
+                <small>+$25/s | Possuídas: <span class="owned">0</span></small>
+              </div>
+              <div class="upgrade-item" id="upgrade-airlift" data-cost="2000" data-effect="80">
+                <strong>✈️ Ponte Aérea ($2000)</strong><br>
+                <small>+$80/s | Possuídas: <span class="owned">0</span></small>
+              </div>
+              <div class="upgrade-item" id="upgrade-infrastructure" data-cost="5000" data-effect="200">
+                <strong>🏗️ Infraestrutura ($5000)</strong><br>
+                <small>+$200/s | Possuídas: <span class="owned">0</span></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const rainContainer = document.getElementById('moneyRain');
+    const symbols = ['💵'];
+
+    function createDollar() {
+      const dollar = document.createElement('div');
+      dollar.classList.add('money');
+      dollar.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+      dollar.style.left = Math.random() * 100 + 'vw';
+      dollar.style.animationDuration = (2 + Math.random() * 3) + 's';
+      dollar.style.fontSize = (1 + Math.random() * 2) + 'rem';
+      rainContainer.appendChild(dollar);
+      setTimeout(() => dollar.remove(), 5000);
+    }
+    setInterval(createDollar, 300);
+
+    // Chart Marshall
+    const marshallCtx = document.getElementById('chartMarshall').getContext('2d');
+    new Chart(marshallCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Reino Unido', 'França', 'Alemanha', 'Itália', 'Holanda', 'Bélgica', 'Suécia'],
+        datasets: [{
+          label: 'Ajuda em bilhões de US$ (1948-52)',
+          data: [3.3, 2.7, 1.4, 1.2, 0.5, 0.7, 0.3],
+          backgroundColor: ['#00ff99', '#00e68a', '#00cc88', '#00b377', '#009966', '#00804d', '#006644'],
+          borderColor: '#fff',
+          borderWidth: 2,
+          borderRadius: 8,
+          hoverBackgroundColor: '#00ffcc'
+        }]
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 2000,
+          easing: 'easeOutBounce'
+        },
+        plugins: {
+          legend: { labels: { color: '#fff' } },
+          title: {
+            display: true,
+            text: 'Distribuição da ajuda do Plano Marshall',
+            color: '#00ff99',
+            font: { size: 18, weight: 'bold' }
+          },
+          tooltip: {
+            callbacks: {
+              label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y} bi US$`,
+              afterLabel: () => 'Período: 1948-1952'
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { color: '#fff' },
+            grid: { color: 'rgba(0, 255, 153, 0.15)' }
+          },
+          x: {
+            ticks: { color: '#fff' },
+            grid: { color: 'rgba(0, 255, 153, 0.05)' }
+          }
+        }
+      }
+    });
+
+    const pibCtx = document.getElementById('chartPIB').getContext('2d');
+    new Chart(pibCtx, {
+      type: 'line',
+      data: {
+        labels: ['1948', '1949', '1950', '1951', '1952'],
+        datasets: [
+          {
+            label: 'Reino Unido',
+            data: [100, 105, 110, 115, 120],
+            borderColor: '#00ff99',
+            backgroundColor: 'rgba(0, 255, 153, 0.3)',
+            tension: 0.3,
+            fill: true,
+            pointRadius: 5,
+            pointHoverRadius: 10,
+            pointHoverBackgroundColor: '#00ffcc',
+            pointHoverBorderColor: '#fff',
+            pointHoverBorderWidth: 3,
+            borderWidth: 3
+          },
+          {
+            label: 'França',
+            data: [100, 108, 115, 123, 130],
+            borderColor: '#00cc88',
+            backgroundColor: 'rgba(0, 204, 136, 0.3)',
+            tension: 0.3,
+            fill: true,
+            pointRadius: 5,
+            pointHoverRadius: 10,
+            pointHoverBackgroundColor: '#00ffcc',
+            pointHoverBorderColor: '#fff',
+            pointHoverBorderWidth: 3,
+            borderWidth: 3
+          },
+          {
+            label: 'Alemanha Ocidental',
+            data: [100, 110, 120, 135, 150],
+            borderColor: '#009966',
+            backgroundColor: 'rgba(0, 153, 102, 0.3)',
+            tension: 0.3,
+            fill: true,
+            pointRadius: 5,
+            pointHoverRadius: 10,
+            pointHoverBackgroundColor: '#00ffcc',
+            pointHoverBorderColor: '#fff',
+            pointHoverBorderWidth: 3,
+            borderWidth: 3
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 2000,
+          easing: 'easeOutBounce'
+        },
+        plugins: {
+          legend: { labels: { color: '#fff' } },
+          title: {
+            display: true,
+            text: 'Crescimento estimado do PIB (1948-1952)',
+            color: '#00ff99',
+            font: { size: 18, weight: 'bold' }
+          },
+          tooltip: {
+            callbacks: {
+              label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y}`,
+              afterLabel: () => 'Índice baseado em 1948'
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: false,
+            title: { display: true, text: 'Índice (1948 = 100)', color: '#00ff99' },
+            ticks: { color: '#fff' },
+            grid: { color: 'rgba(0, 255, 153, 0.12)' }
+          },
+          x: {
+            ticks: { color: '#fff' },
+            grid: { color: 'rgba(0, 255, 153, 0.05)' }
+          }
+        }
+      }
+    });
+
+    // Jogo popup logic
+    const openGameBtn = document.getElementById('openGameBtn');
+    const gamePopupOverlay = document.getElementById('gamePopupOverlay');
+    const closeGameBtn = document.getElementById('closeGameBtn');
+
+    openGameBtn.addEventListener('click', () => {
+      gamePopupOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+    closeGameBtn.addEventListener('click', () => {
+      gamePopupOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+    gamePopupOverlay.addEventListener('click', (e) => {
+      if (e.target === gamePopupOverlay) {
+        gamePopupOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Arrastar popup
+    const gamePopupContent = document.getElementById('gamePopupContent');
+    const dragbar = document.getElementById('gamePopupDragbar');
+    let isDragging = false, dragOffsetX = 0, dragOffsetY = 0;
+
+    dragbar.addEventListener('mousedown', function (e) {
+      isDragging = true;
+      gamePopupContent.classList.add('dragging');
+      // Calcula o offset do mouse em relação ao topo/esquerda do popup
+      const rect = gamePopupContent.getBoundingClientRect();
+      dragOffsetX = e.clientX - rect.left;
+      dragOffsetY = e.clientY - rect.top;
+      // Para evitar seleção de texto
+      document.body.style.userSelect = 'none';
+    });
+
+    document.addEventListener('mousemove', function (e) {
+      if (!isDragging) return;
+      // Calcula nova posição
+      let left = e.clientX - dragOffsetX;
+      let top = e.clientY - dragOffsetY;
+      // Limites para não sair da tela
+      const minLeft = 0, minTop = 0;
+      const maxLeft = window.innerWidth - gamePopupContent.offsetWidth;
+      const maxTop = window.innerHeight - gamePopupContent.offsetHeight;
+      left = Math.max(minLeft, Math.min(left, maxLeft));
+      top = Math.max(minTop, Math.min(top, maxTop));
+      gamePopupContent.style.left = left + 'px';
+      gamePopupContent.style.top = top + 'px';
+      gamePopupContent.style.transform = 'none';
+    });
+
+    document.addEventListener('mouseup', function () {
+      if (isDragging) {
+        isDragging = false;
+        gamePopupContent.classList.remove('dragging');
+        document.body.style.userSelect = '';
+      }
+    });
+
+    // Ao abrir, centraliza o popup
+    openGameBtn.addEventListener('click', () => {
+      gamePopupOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      // Centraliza
+      gamePopupContent.style.left = '50%';
+      gamePopupContent.style.top = '50%';
+      gamePopupContent.style.transform = 'translate(-50%, -50%)';
+    });
+    closeGameBtn.addEventListener('click', () => {
+      gamePopupOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+    gamePopupOverlay.addEventListener('click', (e) => {
+      if (e.target === gamePopupOverlay) {
+        gamePopupOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Game state
+    let gameState = {
+      dollars: 100,
+      dollarsPerClick: 10,
+      dollarsPerSecond: 0,
+      totalInvested: 0,
+      countries: {
+        france: { invested: false, cost: 500, income: 50 },
+        germany: { invested: false, cost: 1000, income: 100 },
+        italy: { invested: false, cost: 750, income: 75 },
+        uk: { invested: false, cost: 800, income: 80 },
+        netherlands: { invested: false, cost: 400, income: 40 },
+        belgium: { invested: false, cost: 350, income: 35 }
+      },
+      upgrades: {
+        factory: { owned: 0, cost: 200, effect: 5 },
+        logistics: { owned: 0, cost: 800, effect: 25 },
+        airlift: { owned: 0, cost: 2000, effect: 80 },
+        infrastructure: { owned: 0, cost: 5000, effect: 200 }
+      }
+    };
+
+    function updateDisplay() {
+      document.getElementById('dollars').textContent = '$' + Math.floor(gameState.dollars);
+      document.getElementById('dollarsPerSecond').textContent = '$' + gameState.dollarsPerSecond + '/s';
+      document.getElementById('totalInvested').textContent = '$' + gameState.totalInvested;
+      document.getElementById('communismThreat').textContent = Math.max(0, Math.floor(100 - (gameState.totalInvested / 1000))) + '%';
+      document.getElementById('dollarsPerClick').textContent = gameState.dollarsPerClick;
+
+      Object.keys(gameState.upgrades).forEach(key => {
+        const upgrade = gameState.upgrades[key];
+        const element = document.getElementById('upgrade-' + key);
+        if (element) {
+          const costText = element.querySelector('strong');
+          const ownedText = element.querySelector('.owned');
+          costText.innerHTML = costText.innerHTML.split('($')[0] + '($' + upgrade.cost + ')';
+          ownedText.textContent = upgrade.owned;
+          if (gameState.dollars < upgrade.cost) {
+            element.classList.add('disabled');
+          } else {
+            element.classList.remove('disabled');
+          }
+        }
+      });
+
+      // Atualiza botões dos países
+      Object.keys(gameState.countries).forEach(key => {
+        const btnId = countryBtnMap[key];
+        const btn = document.getElementById(btnId);
+        const country = gameState.countries[key];
+        if (country.invested) {
+          btn.classList.add('invested');
+          btn.disabled = true;
+          btn.querySelector('.country-cost').textContent = 'Investido!';
+        } else if (gameState.dollars < country.cost) {
+          btn.disabled = true;
+          btn.classList.remove('invested');
+          btn.querySelector('.country-cost').textContent = `Custo: $${country.cost} | +$${country.income}/s`;
+        } else {
+          btn.disabled = false;
+          btn.classList.remove('invested');
+          btn.querySelector('.country-cost').textContent = `Custo: $${country.cost} | +$${country.income}/s`;
+        }
+      });
+    }
+
+    function calculatePassiveIncome() {
+      let total = 0;
+      Object.values(gameState.countries).forEach(country => {
+        if (country.invested) total += country.income;
+      });
+      Object.values(gameState.upgrades).forEach(upgrade => {
+        total += upgrade.effect * upgrade.owned;
+      });
+      gameState.dollarsPerSecond = total;
+    }
+
+    document.getElementById('clickButton').addEventListener('click', () => {
+      gameState.dollars += gameState.dollarsPerClick;
+      updateDisplay();
+    });
+
+    // Substitua os handlers dos países para os novos botões
+    const countryBtnMap = {
+      uk: 'uk-btn',
+      france: 'france-btn',
+      germany: 'germany-btn',
+      italy: 'italy-btn',
+      netherlands: 'netherlands-btn',
+      belgium: 'belgium-btn'
+    };
+
+    Object.keys(gameState.countries).forEach(key => {
+      const btnId = countryBtnMap[key];
+      const btn = document.getElementById(btnId);
+      btn.addEventListener('click', () => {
+        const country = gameState.countries[key];
+        if (!country.invested && gameState.dollars >= country.cost) {
+          gameState.dollars -= country.cost;
+          gameState.totalInvested += country.cost;
+          country.invested = true;
+          calculatePassiveIncome();
+          updateDisplay();
+        }
+      });
+    });
+
+    Object.keys(gameState.upgrades).forEach(key => {
+      document.getElementById('upgrade-' + key).addEventListener('click', () => {
+        const upgrade = gameState.upgrades[key];
+        if (gameState.dollars >= upgrade.cost) {
+          gameState.dollars -= upgrade.cost;
+          upgrade.owned++;
+          upgrade.cost = Math.floor(upgrade.cost * 1.5);
+          calculatePassiveIncome();
+          updateDisplay();
+        }
+      });
+    });
+
+    setInterval(() => {
+      if (gameState.dollarsPerSecond > 0) {
+        gameState.dollars += gameState.dollarsPerSecond;
+        updateDisplay();
+      }
+    }, 1000);
+
+    updateDisplay();
+  </script>
+</body>
+
+</html>
