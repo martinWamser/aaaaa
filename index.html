@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tela Inicial - Doutrina Truman</title>
+
+  <!-- Fontes e libs -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Titillium+Web:wght@300;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --verdeNeon: #00ff99;
+      --fundo: linear-gradient(135deg, #000c1f, #002952);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      font-family: 'Titillium Web', sans-serif;
+      overflow: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('fundo.webp') center/cover no-repeat;
+      filter: brightness(0.5);
+      z-index: -2;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { filter: brightness(0.5) hue-rotate(0deg); }
+      50% { filter: brightness(0.5) hue-rotate(20deg); }
+      100% { filter: brightness(0.5) hue-rotate(0deg); }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--fundo);
+      opacity: 0.7;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: var(--verdeNeon);
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 4rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 15px rgba(0,255,153,0.7);
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+
+    button {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.8rem;
+      padding: 1rem 2rem;
+      border: 2px solid var(--verdeNeon);
+      background: transparent;
+      color: var(--verdeNeon);
+      cursor: pointer;
+      border-radius: 12px;
+      transition: 0.3s all;
+      text-transform: uppercase;
+      box-shadow: 0 0 10px rgba(0,255,153,0.6);
+      animation: fadeIn 2s ease 1s forwards;
+      opacity: 0;
+    }
+
+    button:hover {
+      background: var(--verdeNeon);
+      color: #000;
+      box-shadow: 0 0 20px rgba(0,255,153,1);
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+        .img-truman, .img-marshall {
+      position: absolute;
+      bottom: 0;
+      width: 300px;
+      height: auto;
+    }
+
+    .img-truman { left: 0; }
+    .img-marshall { right: 0; }
+
+    @media (max-width: 768px) {
+      .img-truman, .img-marshall { width: 120px; }
+      h1 { font-size: 2rem; }
+      .btn-start { font-size: 1rem; padding: 0.8rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <h1>Doutrina Truman e Plano Marshall</h1>
+    <button onclick="location.href='cu.html'">Saiba mais</button>
+  </div>
+ <img src="truman.png" alt="Truman" class="img-truman">
+  <img src="marshall.png" alt="Marshall" class="img-marshall">
+</body>
+</html>
